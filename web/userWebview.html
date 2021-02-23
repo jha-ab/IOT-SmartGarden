@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart plant</title>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+</head>
+
+
+<style>
+    /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form*/
+    /*https://unsplash.com/@thesollers #89a28e4a*/
+    body {font-family: Arial, Helvetica, sans-serif;
+        background-color: #89a28e4a;
+    }
+    form {border: 3px solid #f1f1f1;}
+    
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    button:hover {
+      opacity: 0.8;
+    }
+
+    
+    .imgcontainer {
+      text-align: center;
+      margin: 12px 0 6px 0;
+    }
+    
+    img.avatar {
+      width: 40%;
+      border-radius: 50%;
+    }
+    
+    .container {
+      padding: 16px;
+    }
+    
+    span.psw {
+      float: right;
+      padding-top: 8px;
+    }
+    
+  
+    </style>
+
+
+
+
+
+
+    <body>
+        
+        <h1>Welcome to your Smart Plant's View</h1>
+        <div style="float: left;" >
+            <input id='user' type="text"> User Name</input>
+            <input id='input' type="password"> Password</input>
+            <button id="submit" onclick="logIn()">Login</button>
+        </div>
+        <div class="imgcontainer">
+            <img style="float: right;" src="kendal-TW2bfT_tWDI-unsplash.jpg" alt="Avatar" class="avatar">
+        
+            <div style="float: left;text-align: justify;" id="testing" onload="loaded">
+            </div>
+            <div id="actuators">
+                <span>Watering Status: </span>
+                <input type="checkbox" onclick="enableActuator()" id="check">
+                <span id="water"></span>     
+            </div>
+        </div>
+        
+        <div id="data"></div>
+
+        <ul id="plantList"></ul>
+        
+        
+        
+
+
+        
+
+
+        
+    </body>
+
+<script src="clientView.js"></script>
+
+
+</html>

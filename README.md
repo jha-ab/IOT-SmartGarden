@@ -1,1 +1,1 @@
-# IOT-SmartGarden
+# smart-plant 
